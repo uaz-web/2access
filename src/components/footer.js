@@ -2,9 +2,28 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+var style = {
+  backgroundColor: "#f4ede5",
+  textAlign: "center",
+  padding: "20px",
+  position: "fixed",
+  left: "0",
+  bottom: "0",
+  width: "100%",
+}
+
+var phantom = {
+  display: 'block',
+  padding: '20px',
+  height: '60px',
+  width: '100%',
+}
+
 const Footer = ({ children }) => (
-  <footer className="fixed-bottom" style={{ background: `#f4ede5`, marginTop: `1.45rem`}}>
-    <div class="container" style={{ marginTop: `1.45rem`, marginBottom: `1.45rem` }}>
+  <>
+  <div style={phantom} />
+  <footer style={style}>
+    <div class="container">
       {/* <hr /> */}
       {/* <br /> */}
       <div class="d-flex flex-row justify-content-center">
@@ -24,6 +43,7 @@ const Footer = ({ children }) => (
       </div>
     </div>
   </footer>
+  </>
 )
 
 Footer.propTypes = {
