@@ -43,7 +43,9 @@ class AlertBox extends React.Component {
         <div>
           <ul>
             {alerts.map(alert => (
-              <li key={alert.servicealertid}>{alert.overview}</li>
+              <li key={alert.servicealertid}>
+                <a href={alert.servicealerturl}>{alert.overview}</a>
+              </li>
             ))}
           </ul>
         </div>
