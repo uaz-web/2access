@@ -23,23 +23,21 @@ const Footer = ({ children }) => (
   <>
   <div style={phantom} />
   <footer style={style}>
-    <div class="container">
-      {/* <hr /> */}
-      {/* <br /> */}
-      <div class="d-flex flex-row justify-content-center">
-        { children }
+    {/* <hr /> */}
+    {/* <br /> */}
+    <div class="d-flex flex-row justify-content-center">
+      { children }
+    </div>
+    <div class="d-flex flex-row justify-content-center">
+      <div class="p-2">
+        <a href="https://privacy.arizona.edu/privacy-statement">
+          University Privacy Statement
+        </a>
       </div>
-      <div class="d-flex flex-row justify-content-center">
-        <div class="p-2">
-          <a href="https://privacy.arizona.edu/privacy-statement">
-            University Privacy Statement
-          </a>
-        </div>
-      </div>
-      <div class="d-flex flex-row justify-content-center">
-        <div class="p-2">
-          © {new Date().getFullYear()} The Arizona Board of Regents | The University of Arizona | Tucson, Arizona 85721 | 520-621-2211
-        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center">
+      <div class="p-2">
+        © {new Date().getFullYear()} The Arizona Board of Regents | The University of Arizona | Tucson, Arizona 85721 | 520-621-2211
       </div>
     </div>
   </footer>
