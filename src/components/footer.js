@@ -4,7 +4,7 @@ import React from "react"
 
 const Footer = ({ children }) => (
   <footer className="fixed-bottom" style={{ background: `#f4ede5`, marginTop: `1.45rem`}}>
-    <div class="container">
+    <div class="container" style={{ marginTop: `1.45rem`, marginBottom: `1.45rem` }}>
       {/* <hr /> */}
       {/* <br /> */}
       <div class="d-flex flex-row justify-content-center">
