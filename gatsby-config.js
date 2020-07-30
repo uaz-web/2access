@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `University of Arizona`,
+    title: `The University of Arizona`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#ab0520`,
         theme_color: `#ab0520`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
