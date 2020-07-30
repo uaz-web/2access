@@ -10,7 +10,9 @@ import ServiceBox from "../components/servicebox"
 const IndexPage = () => (
   <Layout>
     <SEO title="UAccess" />
-    <h1>UAccess</h1>
+    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <Image />
+    </div>
 
     <div class="container">
       <div class="row">
@@ -26,13 +28,10 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <p>Welcome to your new Gatsby site.</p>
+    {/* <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
   </Layout>
 )
 
