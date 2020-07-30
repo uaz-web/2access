@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Footer = ({ children }) => (
-  <footer className="fixed-bottom" style={{background: '#f4ede5'}}>
+  <footer className="fixed-bottom" style={{ background: `#f4ede5`, marginTop: `1.45rem`}}>
     <div class="container">
       {/* <hr /> */}
-      <br />
+      {/* <br /> */}
       <div class="d-flex flex-row justify-content-center">
         { children }
       </div>
