@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import AlertBox from "../components/alertbox"
 import ServiceBox from "../components/servicebox"
-import Card from "../components/card"
+import { CardDeck, Card, CardHeader, CardBody, Container } from 'reactstrap'
 
 const IndexPage = () => (
   <Layout>
@@ -15,24 +15,27 @@ const IndexPage = () => (
       <Image />
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <Card header="Alerts">
+    <Container>
+      <CardDeck>
+        <Card>
+          <CardHeader>Alerts</CardHeader>
+          <CardBody>
             <AlertBox />
-          </Card>
-        </div>
+          </CardBody>
+        </Card>
 
-        <div class="col">
-          <Card header="Services">
+        <Card>
+          <CardHeader>Services</CardHeader>
+          <CardBody>
             <ServiceBox />
-          </Card>
-        </div>
-      </div>
+          </CardBody>
+        </Card>
+      </CardDeck>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <Card header="Support">
+      <CardDeck>
+        <Card>
+          <CardHeader>Support</CardHeader>
+          <CardBody>
             24/7 IT Support Center
               <br />
             <Link to="https://it.arizona.edu/service/247-it-support">
@@ -50,11 +53,12 @@ const IndexPage = () => (
             <Link to="http://community.uaccess.arizona.edu/">
               System Resources, Forums and Training
               </Link>
-          </Card>
-        </div>
+          </CardBody>
+        </Card>
 
-        <div class="col-sm-6">
-          <Card header="Information">
+        <Card>
+          <CardHeader>Information</CardHeader>
+          <CardBody>
             University Business Event Tracking
               <br />
             <Link to="http://ubet.arizona.edu/">
@@ -70,10 +74,10 @@ const IndexPage = () => (
               Mon-Fri, 8pm to 7am<br />
               Sat-Sun, midnight to 5:30am<br />
               Wed of Payroll Weeks, 7pm to 7am<br />
-          </Card>
-        </div>
-      </div>
-    </div>
+          </CardBody>
+        </Card>
+      </CardDeck>
+    </Container>
 
     {/* <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
