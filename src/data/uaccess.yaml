@@ -1,99 +1,108 @@
-student:
-  title: Student
+# Student ======================================================================
+-
+  title: Student Center
+  service: uaccessstudent
   weight: 1
-  links:
-    -
-      title: Student Center
-      service: uaccessstudent
-      weight: 1
-      url: https://studentcenter.arizona.edu/
-      train: https://sa-trn.mosaic.arizona.edu/psp/uazsatrn/UA_STUDENT/HRMS/h/?tab=DEFAULT
-    -
-      title: Guest Center
-      service: uaccessguestcenter
-      weight: 2
-      url: https://student.uaccess.arizona.edu/psp/uazsaprd/UA_GUEST/HRMS/h/?tab=DEFAULT
-    -
-      title: Instructor Center
-      service: uaccessinstructor
-      weight: 3
-      url: https://student.uaccess.arizona.edu/psp/uazsaprd/UA_FACULTY/HRMS/h/?tab=DEFAULT
-      train: https://sa-trn.mosaic.arizona.edu/psp/uazsatrn_1/UA_FACULTY/HRMS/c/SA_LEARNING_MANAGEMENT.SS_FACULTY.GBL
-    -
-      title: Administrative Staff
-      service: uaccessadministrativestaff
-      weight: 4
-      url: https://student851.uaccess.arizona.edu/psc/uazsaprd/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
-      train: https://sa-trn.mosaic.arizona.edu/psc/uazsatrn/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
-admin:
-  title: Admin
+  url: https://studentcenter.arizona.edu/
+  train: https://sa-trn.mosaic.arizona.edu/psp/uazsatrn/UA_STUDENT/HRMS/h/?tab=DEFAULT
+  tags: [student]
+-
+  title: Guest Center
+  service: uaccessguestcenter
   weight: 2
-  links:
-    -
-      title: Employee / Manager Self Service
-      service: uaccessemployee
-      weight: 1
-      url: https://employee851.uaccess.arizona.edu/psc/uazhrprd/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
-      train: https://hr-trn.mosaic.arizona.edu/psp/uazhrtrn/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
-    -
-      title: Learning
-      service: uaccesslearning
-      weight: 2
-      url: https://learning.uaccess.arizona.edu/psc/uazelprd/EMPLOYEE/ELM/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
-      train: https://el-stg.mosaic.arizona.edu/psc/uazelstg/EMPLOYEE/ELM/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
-    -
-      title: Analytics / Reporting
-      service: uaccessanalytics
-      weight: 3
-      url: http://analytics.uaccess.arizona.edu/
-      train: https://analytics-trn.bi.arizona.edu/analytics
-      vpn: true
-    -
-      title: Research
-      service: uaccessresearch
-      weight: 4
-      url: https://research.uaccess.arizona.edu/
-      vpn: true
-    -
-      title: RBC System (Budget)
-      service: uaccessbudget
-      weight: 5
-      url: https://budget4.budgetoffice.arizona.edu:8443/budget/servlet/ProtectedResource
-    -
-      title: Space
-      service: uaccessspace
-      weight: 6
-      url: https://space.uaccess.arizona.edu/archibus/login.axvw
-      vpn: true
-    -
-      title: Financials
-      service: uaccessfinancials
-      weight: 7
-      url: https://financials.uaccess.arizona.edu/
-      train: https://kfs7-trn.ua-uits-kuali-nonprod.arizona.edu/kfs/portal.do
-      vpn: true
-    -
-      title: Adaptive Insights (Planning)
-      service: uaccessplanning
-      weight: 8
-      url: http://planning.uaccess.arizona.edu/
-tools:
-  title: Other Resources
+  url: https://student.uaccess.arizona.edu/psp/uazsaprd/UA_GUEST/HRMS/h/?tab=DEFAULT
+  tags: [student]
+-
+  title: Instructor Center
+  service: uaccessinstructor
   weight: 3
-  links:
-    -
-      title: CatMail
-      weight: 1
-      url: https://catmail.arizona.edu/
-    -
-      title: D2L
-      weight: 2
-      url: https://d2l.arizona.edu/
-    -
-      title: Zoom
-      weight: 3
-      url: https://arizona.zoom.us/
-    -
-      title: VPN
-      weight: 4
-      url: https://vpn.arizona.edu/
+  url: https://student.uaccess.arizona.edu/psp/uazsaprd/UA_FACULTY/HRMS/h/?tab=DEFAULT
+  train: https://sa-trn.mosaic.arizona.edu/psp/uazsatrn_1/UA_FACULTY/HRMS/c/SA_LEARNING_MANAGEMENT.SS_FACULTY.GBL
+  tags: [student]
+-
+  title: Administrative Staff
+  service: uaccessadministrativestaff
+  weight: 4
+  url: https://student851.uaccess.arizona.edu/psc/uazsaprd/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+  train: https://sa-trn.mosaic.arizona.edu/psc/uazsatrn/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+  tags: [student]
+
+# Admin ========================================================================
+-
+  title: Employee / Manager Self Service
+  service: uaccessemployee
+  weight: 1
+  url: https://employee851.uaccess.arizona.edu/psc/uazhrprd/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+  train: https://hr-trn.mosaic.arizona.edu/psp/uazhrtrn/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+  tags: [admin]
+-
+  title: Learning
+  service: uaccesslearning
+  weight: 2
+  url: https://learning.uaccess.arizona.edu/psc/uazelprd/EMPLOYEE/ELM/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+  train: https://el-stg.mosaic.arizona.edu/psc/uazelstg/EMPLOYEE/ELM/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+  tags: [admin]
+-
+  title: Analytics / Reporting
+  service: uaccessanalytics
+  weight: 3
+  url: http://analytics.uaccess.arizona.edu/
+  train: https://analytics-trn.bi.arizona.edu/analytics
+  vpn: true
+  tags: [admin]
+-
+  title: Research
+  service: uaccessresearch
+  weight: 4
+  url: https://research.uaccess.arizona.edu/
+  vpn: true
+  tags: [admin]
+-
+  title: RBC System (Budget)
+  service: uaccessbudget
+  weight: 5
+  url: https://budget4.budgetoffice.arizona.edu:8443/budget/servlet/ProtectedResource
+  tags: [admin]
+-
+  title: Space
+  service: uaccessspace
+  weight: 6
+  url: https://space.uaccess.arizona.edu/archibus/login.axvw
+  vpn: true
+  tags: [admin]
+-
+  title: Financials
+  service: uaccessfinancials
+  weight: 7
+  url: https://financials.uaccess.arizona.edu/
+  train: https://kfs7-trn.ua-uits-kuali-nonprod.arizona.edu/kfs/portal.do
+  vpn: true
+  tags: [admin]
+-
+  title: Adaptive Insights (Planning)
+  service: uaccessplanning
+  weight: 8
+  url: http://planning.uaccess.arizona.edu/
+  tags: [admin]
+
+# Other ========================================================================
+-
+  title: CatMail
+  weight: 1
+  url: https://catmail.arizona.edu/
+  tags: [other]
+-
+  title: D2L
+  weight: 2
+  url: https://d2l.arizona.edu/
+  tags: [other]
+-
+  title: Zoom
+  weight: 3
+  url: https://arizona.zoom.us/
+  tags: [other]
+-
+  title: VPN
+  weight: 4
+  url: https://vpn.arizona.edu/
+  tags: [other]

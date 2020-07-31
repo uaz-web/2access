@@ -21,14 +21,18 @@ const IndexPage = ({ data }) => (
         <Card>
           <CardHeader>Students</CardHeader>
           <CardBody>
-            <LinkBox links={data.dataYaml.student.links}/>
+            <LinkBox links={data.allUaccessYaml.nodes.filter(
+              x => x.tags != null && x.tags.includes('student'))
+            }/>
           </CardBody>
         </Card>
 
         <Card>
           <CardHeader>Administrative</CardHeader>
           <CardBody>
-            <LinkBox links={data.dataYaml.admin.links} />
+            <LinkBox links={data.allUaccessYaml.nodes.filter(
+              x => x.tags != null && x.tags.includes('admin'))
+            }/>
           </CardBody>
         </Card>
       </CardDeck>
@@ -109,18 +113,11 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query LinkQuery {
-    dataYaml {
-      student {
-        links {
-          title
-          url
-        }
-      }
-      admin {
-        links {
-          title
-          url
-        }
+    allUaccessYaml {
+      nodes {
+        title
+        url
+        tags
       }
     }
   }
