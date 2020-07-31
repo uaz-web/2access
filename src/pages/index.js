@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -7,8 +7,9 @@ import SEO from "../components/seo"
 import AlertBox from "../components/alertbox"
 import ServiceBox from "../components/servicebox"
 import { CardDeck, Card, CardHeader, CardBody, CardText, Container } from 'reactstrap'
+import LinkBox from "../components/linkbox"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="UAccess" />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
@@ -16,6 +17,22 @@ const IndexPage = () => (
     </div>
 
     <Container>
+      <CardDeck>
+        <Card>
+          <CardHeader>Students</CardHeader>
+          <CardBody>
+            <LinkBox links={data.dataYaml.student.links}/>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>Administrative</CardHeader>
+          <CardBody>
+            <LinkBox links={data.dataYaml.admin.links} />
+          </CardBody>
+        </Card>
+      </CardDeck>
+
       <CardDeck>
         <Card>
           <CardHeader>Alerts</CardHeader>
@@ -89,5 +106,24 @@ const IndexPage = () => (
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
   </Layout>
 )
+
+export const query = graphql`
+  query LinkQuery {
+    dataYaml {
+      student {
+        links {
+          title
+          url
+        }
+      }
+      admin {
+        links {
+          title
+          url
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
