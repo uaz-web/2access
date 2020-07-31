@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import AlertBox from "../components/alertbox"
 import ServiceBox from "../components/servicebox"
-import { CardDeck, Card, CardHeader, CardBody, Container } from 'reactstrap'
+import { CardDeck, Card, CardHeader, CardBody, CardText, Container } from 'reactstrap'
 
 const IndexPage = () => (
   <Layout>
@@ -36,35 +36,38 @@ const IndexPage = () => (
         <Card>
           <CardHeader>Support</CardHeader>
           <CardBody>
-            24/7 IT Support Center
+            <CardText>
+              24/7 IT Support Center
               <br />
-            <Link to="https://it.arizona.edu/service/247-it-support">
-              Request Assistance or Report a Problem
+              <Link to="https://it.arizona.edu/service/247-it-support">
+                Request Assistance or Report a Problem
               </Link>
-            <br />
+              <br />
                 Requesting Access
               <br />
-            <Link to="https://it.arizona.edu/service/access-provisioning-tool">
-              UAccess Access Provisioning ToolVPN Required
+              <Link to="https://it.arizona.edu/service/access-provisioning-tool">
+                UAccess Access Provisioning ToolVPN Required
               </Link>
-            <br />
+              <br />
                 UAccess Community
               <br />
-            <Link to="http://community.uaccess.arizona.edu/">
-              System Resources, Forums and Training
+              <Link to="http://community.uaccess.arizona.edu/">
+                System Resources, Forums and Training
               </Link>
+            </CardText>
           </CardBody>
         </Card>
 
         <Card>
           <CardHeader>Information</CardHeader>
           <CardBody>
-            University Business Event Tracking
+            <CardText>
+              University Business Event Tracking
               <br />
-            <Link to="http://ubet.arizona.edu/">
-              University Business Event Tracking (UBET)
+              <Link to="http://ubet.arizona.edu/">
+                University Business Event Tracking (UBET)
               </Link>
-            <br />
+              <br />
               Maintenance Window
               <br />
               Every Sunday, 6am to 6pm
@@ -74,6 +77,7 @@ const IndexPage = () => (
               Mon-Fri, 8pm to 7am<br />
               Sat-Sun, midnight to 5:30am<br />
               Wed of Payroll Weeks, 7pm to 7am<br />
+            </CardText>
           </CardBody>
         </Card>
       </CardDeck>
