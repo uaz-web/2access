@@ -18,13 +18,15 @@ const IndexPage = () => (
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2>Alerts</h2>
-          <AlertBox />
+          <Card header="Alerts">
+            <AlertBox />
+          </Card>
         </div>
 
         <div class="col">
-          <h2>Services</h2>
-          <ServiceBox />
+          <Card header="Services">
+            <ServiceBox />
+          </Card>
         </div>
       </div>
       <div class="row">
