@@ -1,29 +1,28 @@
-// If you don't want to use TypeScript you can delete this file!
 import React from "react"
 import PropTypes from "prop-types"
-import { PageProps, Link, StaticQuery, graphql } from "gatsby"
 
-const LinkBox = ({ links }) => (
+const LinkBox = (props) => (
   <div>
-    {links.map(link =>
-    <>
-      <Link to={link.url}>
+    {props.links.map(link =>
+      <div key={link.url}>
+        <a href={props.train ? (link.train ? link.train : `#`) : link.url}>
         {link.title}
-      </Link>
+        </a>
         {link.vpn ? (<span>&#128274;</span>) : ``}
-      <br />
-    </>
+        <br />
+      </div>
     )}
   </div>
 )
 
 LinkBox.propTypes = {
-  links: PropTypes.object,
+  links: PropTypes.array,
+  train: PropTypes.bool
 }
 
 LinkBox.defaultProps = {
-  links: {},
+  links: [],
+  train: false
 }
 
 export default LinkBox
-
