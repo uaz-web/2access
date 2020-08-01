@@ -9,7 +9,9 @@ const LinkBox = ({ links }) => (
     <>
       <Link to={link.url}>
         {link.title}
-      </Link><br />
+      </Link>
+        {link.vpn ? (<span>&#128274;</span>) : ``}
+      <br />
     </>
     )}
   </div>

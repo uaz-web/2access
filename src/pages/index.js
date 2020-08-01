@@ -118,6 +118,7 @@ export const query = graphql`
         title
         url
         tags
+        vpn
       }
     }
   }
