@@ -1,8 +1,8 @@
 import React from "react"
 import UAccess from "../components/uaccess"
 
-const IndexPage = () => (
-  <UAccess />
+const TrainPage = () => (
+  <UAccess train/>
 )
 
-export default IndexPage
+export default TrainPage
