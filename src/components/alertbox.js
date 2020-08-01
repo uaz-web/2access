@@ -39,17 +39,21 @@ class AlertBox extends React.Component {
     } else if (!isLoaded) {
       return <div>Loading Alerts...</div>;
     } else {
-      return (
-        <div>
-          <ul>
-            {alerts.map(alert => (
-              <li key={alert.servicealertid}>
-                <a href={alert.servicealerturl}>{alert.overview}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      );
+      var result = <div>No active alerts</div>
+      if (alerts.length !== 0) {
+        result = (
+          <div>
+            <ul>
+              {alerts.map(alert => (
+                <li key={alert.servicealertid}>
+                  <a href={alert.servicealerturl}>{alert.overview}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+      return result
     }
   }
 }
