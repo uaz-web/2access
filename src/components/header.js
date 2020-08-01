@@ -17,9 +17,9 @@ const Header = ({ siteTitle }) => (
     backgroundColor: `#ab0520`,
     marginBottom: `1.45rem`,
   }}>
-    <section class="container l-container">
-      <div class="row">
-        <div class="col-xs-10 col-sm-6">
+    <section className="container l-container">
+      <div className="row">
+        <div className="col-xs-10 col-sm-6">
           <Link to="/" style={ arizonaLogo }>
             <img src="https://cdn.uadigital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg" />
           </Link>
