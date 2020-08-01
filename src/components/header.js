@@ -21,7 +21,10 @@ const Header = ({ siteTitle }) => (
       <div className="row">
         <div className="col-xs-10 col-sm-6">
           <Link to="/" style={ arizonaLogo }>
-            <img src="https://cdn.uadigital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg" />
+            <img
+              alt="The University of Arizona"
+              src="https://cdn.uadigital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg"
+            />
           </Link>
         </div>
       </div>

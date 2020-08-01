@@ -5,10 +5,10 @@ const LinkBox = (props) => (
   <div>
     {props.links.map(link =>
       <div key={link.url}>
-        <a href={props.train ? (link.train ? link.train : `#`) : link.url}>
+        <a href={props.train ? (link.train ? link.train : ``) : link.url}>
         {link.title}
         </a>
-        {link.vpn ? (<span>&#128274;</span>) : ``}
+        {link.vpn ? (<span role="img" aria-label="VPN Required">&#128274;</span>) : ``}
         <br />
       </div>
     )}
