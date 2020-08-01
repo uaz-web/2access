@@ -39,15 +39,20 @@ class ServiceBox extends React.Component {
     } else if (!isLoaded) {
       return <div>Loading Services...</div>;
     } else {
-      return (
-        <div>
-          <ul>
-            {services.filter(service => service.currentstate.toLowerCase() !== 'optimal').map(service => (
-              <li key={service.machinename}>{service.servicename}</li>
-            ))}
-          </ul>
-        </div>
-      );
+      var result = <div>All services optimal</div>
+      const problemServices = services.filter(service => service.currentstate.toLowerCase() !== 'optimal')
+      if (problemServices.length !== 0){
+        result = (
+          <div>
+            <ul>
+              {problemServices.map(service => (
+                <li key={service.machinename}>{service.servicename} - {service.currentstate}</li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+      return result
     }
   }
 }
