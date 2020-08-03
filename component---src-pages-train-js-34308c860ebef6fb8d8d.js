@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{Av8s:function(n,t,e){"use strict";e.r(t);var a=e("q1tI"),r=e.n(a),c=e("HDL5");t.default=function(){return r.a.createElement(c.a,{train:!0})}}}]);
+//# sourceMappingURL=component---src-pages-train-js-34308c860ebef6fb8d8d.js.map
