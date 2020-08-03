@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `UAccess`,
+        short_name: `uaccess`,
         start_url: `/`,
         background_color: `#ab0520`,
         theme_color: `#ab0520`,
@@ -36,17 +36,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-serviceworker`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `UAccess`,
-    //     short_name: `UAccess`,
-    //     start_url: `/`,
-    //     background_color: `#f7f0eb`,
-    //     theme_color: `#a2466c`,
-    //     display: `standalone`,
-    //   },
-    // },
     // {
     //   resolve: `gatsby-plugin-offline`,
     //   options: {
