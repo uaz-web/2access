@@ -1,61 +1,26 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
-class AlertBox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      alerts: []
-    };
-  }
+const AlertBox = () => {
+  const [alerts, setAlerts] = useState([]);
+  useEffect(() => {
+    fetch(`https://api.alerts.uaservice.arizona.edu/alerts.json`)
+      .then(response => response.json())
+      .then(resultData => {
+        setAlerts(resultData)
+      })
+  }, [])
 
-  componentDidMount() {
-    fetch("https://api.alerts.uaservice.arizona.edu/alerts.json")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            alerts: result
-          });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-  }
-
-  render() {
-    const { error, isLoaded, alerts } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading Alerts...</div>;
-    } else {
-      var result = <div>No active alerts</div>
-      if (alerts.length !== 0) {
-        result = (
-          <div>
-            <ul>
-              {alerts.map(alert => (
-                <li key={alert.servicealertid}>
-                  <a href={alert.servicealerturl}>{alert.overview}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )
-      }
-      return result
-    }
-  }
+  return (
+    <div>
+      <ul>
+        {alerts.map(alert => (
+          <li key={alert.servicealertid}>
+            <a href={alert.servicealerturl}>{alert.overview}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default AlertBox
